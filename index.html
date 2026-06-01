@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Loop-You — Check your vibe. Get today’s Loop.</title>
-<meta name="description" content="Loop-You is a mood-first lifestyle and wellness app for UK Gen Z. Check your vibe and get a simple daily plan for fitness, food, skincare and music." />
-<meta property="og:title" content="Loop-You — Check your vibe. Get today’s Loop." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>Loop-You — Check your vibe. Get today's Loop.</title>
+<meta name="description" content="Loop-You is a mood-first wellness app for UK Gen Z. Check your vibe. Get one simple plan for fitness, food, skincare and music." />
+<meta property="og:title" content="Loop-You — Check your vibe. Get today's Loop." />
 <meta property="og:description" content="A daily wellness friend for fitness, food, skincare and music — based on your mood." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="og-image.png" />
@@ -20,93 +20,462 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <style>
-:root{--bg:#f8f8f3;--white:#fff;--ink:#111312;--muted:#69716b;--line:#e1e5dc;--lime:#c9ff4a;--mint:#dff6ea;--lav:#eee8ff;--peach:#ffebdd;--rose:#ffe8ef;--sky:#e7f1ff;--green:#0f8e5f;--dark:#0b0d0c;--shadow:0 24px 80px rgba(17,19,18,.10)}*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth}body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;overflow-x:hidden}a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:0 auto;padding:0 24px}.nav{height:80px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:40;background:rgba(248,248,243,.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(225,229,220,.65)}.brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:900;letter-spacing:-.04em}.mark{width:36px;height:36px;border-radius:50%;background:linear-gradient(145deg,#E8B795,#D08C68);display:grid;place-items:center;flex:0 0 auto;box-shadow:0 4px 12px rgba(208,140,104,.3)}.mark svg{width:36px;height:36px}.links{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:750;color:var(--muted)}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;background:var(--ink);color:white;border-radius:999px;padding:13px 22px;font-weight:850;font-size:14px;cursor:pointer;transition:.18s;font-family:Inter}.btn:hover{transform:translateY(-2px)}.btn.lime{background:var(--lime);color:var(--ink)}.btn.white{background:white;color:var(--ink);border:1px solid var(--line)}.eyebrow{font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-bottom:14px}h1{font-size:clamp(48px,8vw,104px);line-height:.96;letter-spacing:-.08em;font-weight:900;max-width:900px}h2{font-size:clamp(34px,5vw,72px);line-height:.98;letter-spacing:-.06em;font-weight:900;max-width:840px}h3{font-size:22px;letter-spacing:-.03em;line-height:1.1;font-weight:900}.lead{font-size:clamp(17px,2vw,22px);color:var(--muted);max-width:690px;margin-top:24px}.small{font-size:13px;color:var(--muted);font-weight:650}section{padding:92px 0}.center{text-align:center}.center h2,.center .lead{margin-left:auto;margin-right:auto}.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:center;min-height:760px;padding:54px 0 76px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:34px 0 16px}.hero-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:28px}.tagpill{background:white;border:1px solid var(--line);padding:9px 13px;border-radius:999px;font-size:13px;font-weight:850;color:#2f3430}.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px;max-width:640px}.stat{background:white;border:1px solid var(--line);border-radius:24px;padding:18px 20px}.stat b{display:block;font-size:32px;letter-spacing:-.05em;line-height:1}.stat span{font-size:12px;color:var(--muted);font-weight:850;text-transform:uppercase;letter-spacing:.08em}.visual{display:flex;justify-content:center}.phone{width:355px;height:720px;background:var(--dark);border-radius:48px;padding:10px;position:relative;box-shadow:0 32px 90px rgba(17,19,18,.28)}.phone:before{content:"";position:absolute;width:108px;height:24px;background:var(--dark);top:23px;left:50%;transform:translateX(-50%);border-radius:20px;z-index:5}.screen{height:100%;border-radius:39px;background:#f9f8f1;overflow:hidden;padding:56px 22px 22px;display:flex;flex-direction:column;position:relative}.screen:after{content:"";position:absolute;right:-90px;bottom:-110px;width:230px;height:230px;background:var(--lime);border-radius:50%;opacity:.38}.chat{display:flex;gap:10px;align-items:flex-start;margin-bottom:16px;position:relative;z-index:2}.avatar{width:46px;height:46px;border-radius:16px;background:var(--lime);display:grid;place-items:center;font-weight:900}.bubble{background:white;border:1px solid var(--line);border-radius:18px;padding:13px 15px;color:#353a36;font-weight:700;font-size:13px;box-shadow:0 10px 26px rgba(17,19,18,.06)}.phone-label{display:inline-flex;width:max-content;background:var(--mint);color:var(--green);font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:7px 10px;margin-bottom:11px;position:relative;z-index:2}.phone-title{font-size:31px;line-height:1.03;letter-spacing:-.06em;font-weight:900;position:relative;z-index:2;margin-bottom:12px}.recognition{font-size:13px;color:var(--muted);font-weight:650;font-style:italic;position:relative;z-index:2;margin-bottom:14px}.task{background:white;border:1px solid var(--line);border-radius:20px;padding:14px;display:flex;gap:12px;margin-bottom:9px;position:relative;z-index:2}.task .icon{width:32px;height:32px;border-radius:11px;background:var(--bg);display:grid;place-items:center;flex:0 0 auto}.task small{display:block;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-weight:900;margin-bottom:2px}.task b{font-size:14px}.task p{font-size:13px;color:#444b46;font-weight:650}.memory{margin-top:auto;background:var(--ink);color:white;border-radius:22px;padding:15px;position:relative;z-index:2}.memory small{display:block;color:var(--lime);font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:900;margin-bottom:4px}.memory p{font-size:13px;font-weight:700;color:#edefe7}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}.card{background:white;border:1px solid var(--line);border-radius:30px;padding:28px;box-shadow:0 14px 46px rgba(17,19,18,.04)}.card .num{font-size:13px;color:var(--green);font-weight:900;letter-spacing:.12em;margin-bottom:46px}.card p{color:var(--muted);font-size:15px;margin-top:12px}.iconblock{width:42px;height:42px;border-radius:15px;display:grid;place-items:center;background:var(--lime);margin-bottom:18px;font-size:20px}.demo{background:white;border:1px solid var(--line);border-radius:42px;padding:44px;display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;box-shadow:var(--shadow)}.demo h2{font-size:clamp(34px,4vw,58px)}.label{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.14em;color:var(--green);margin-top:20px;margin-bottom:9px}.chiprow{display:flex;gap:10px;flex-wrap:wrap}.chip{background:white;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-size:14px;font-weight:850;color:var(--ink);cursor:pointer;font-family:Inter}.chip.on{background:var(--ink);color:white;border-color:var(--ink)}.demo-phone{width:330px;height:665px;margin:0 auto;background:var(--dark);border-radius:44px;padding:9px;box-shadow:0 28px 80px rgba(17,19,18,.22);position:relative}.demo-phone:before{content:"";position:absolute;width:96px;height:21px;background:var(--dark);top:19px;left:50%;transform:translateX(-50%);border-radius:18px;z-index:5}.demo-screen{height:100%;border-radius:36px;background:#f9f8f1;padding:50px 20px 20px;display:flex;flex-direction:column;overflow:hidden}.loops{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:44px}.loop-card{background:white;border:1px solid var(--line);border-radius:32px;padding:28px;min-height:250px}.loop-card:nth-child(1){background:var(--mint)}.loop-card:nth-child(2){background:var(--peach)}.loop-card:nth-child(3){background:var(--lav)}.loop-card:nth-child(4){background:var(--sky)}.loop-card ul{list-style:none;margin-top:18px}.loop-card li{padding:8px 0;border-top:1px solid rgba(17,19,18,.10);font-weight:750;color:#343934}.vibegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}.vibe{aspect-ratio:1;border-radius:32px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;color:var(--ink);overflow:hidden;position:relative}.vibe:nth-child(1){background:var(--lime)}.vibe:nth-child(2){background:var(--sky)}.vibe:nth-child(3){background:var(--lav)}.vibe:nth-child(4){background:var(--peach)}.vibe small{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:#59615b}.vibe b{font-size:25px;line-height:1.05;letter-spacing:-.05em}.wait{background:var(--dark);border-radius:44px;padding:72px 48px;color:white;overflow:hidden;position:relative}.wait:before{content:"";position:absolute;right:-120px;top:-110px;width:360px;height:360px;background:var(--lime);border-radius:50%;opacity:.20}.wait-inner{max-width:660px;margin:0 auto;text-align:center;position:relative;z-index:2}.wait h2{color:white}.wait .lead{color:#b7bdb8;margin-left:auto;margin-right:auto}form{display:grid;gap:13px;margin-top:30px;text-align:left}input,select{width:100%;padding:16px 18px;border-radius:18px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);color:white;font:700 15px Inter}select option{background:#111;color:white}input::placeholder{color:#8f9691}form label{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.13em;color:var(--lime);margin:8px 0 -5px 4px}.note{font-size:12px;color:#9ba29c;text-align:center}.note a{color:var(--lime)}.success{display:none;background:rgba(201,255,74,.14);border:1px solid rgba(201,255,74,.45);border-radius:20px;padding:24px;margin-top:25px}.success.show{display:block}.success b{display:block;color:var(--lime);font-size:24px;margin-bottom:4px}.privacy{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}footer{border-top:1px solid var(--line);padding:48px 0;text-align:center;color:var(--muted);font-size:13px}footer .brand{justify-content:center;margin-bottom:12px}.footlinks{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:16px}.footlinks a{font-weight:800;color:var(--muted)}@media(max-width:940px){.links a:not(.btn){display:none}.hero,.demo{grid-template-columns:1fr;text-align:center}.hero-actions,.chiprow{justify-content:center}.lead{margin-left:auto;margin-right:auto}.hero-stats{margin-left:auto;margin-right:auto}.grid4,.grid3,.privacy{grid-template-columns:1fr}.loops,.vibegrid{grid-template-columns:repeat(2,1fr)}}/* What's Next section — anticipation builder */
-.next-section{padding:80px 0;text-align:center}
-.next-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px;max-width:1100px;margin-left:auto;margin-right:auto}
-@media(max-width:880px){.next-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.next-grid{grid-template-columns:1fr;max-width:300px}}
-.next-card{background:rgba(255,255,255,.55);border:1px solid rgba(0,0,0,.06);border-radius:20px;padding:24px 18px;text-align:left;position:relative;transition:transform .25s ease,box-shadow .25s ease;cursor:default}
-.next-card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.08)}
-.next-card .ne{font-size:32px;line-height:1;margin-bottom:14px;display:block}
-.next-card h4{font-size:15px;font-weight:900;letter-spacing:-.01em;margin-bottom:6px;color:var(--ink)}
-.next-card p{font-size:12.5px;line-height:1.5;color:#69716b;margin-bottom:10px}
-.next-tag{font-size:9px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--green);background:rgba(15,142,95,.08);padding:4px 8px;border-radius:8px;display:inline-block}
-.next-line{font-size:13px;color:#69716b;margin-top:36px;font-style:italic}
-.next-line b{color:var(--ink);font-style:normal;font-weight:900}
-/* mood-avatar — Loop's signature face. Same warm character, mood-reactive. */
-.mood-av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;box-shadow:0 6px 14px rgba(17,19,18,.12);transition:background .35s ease}
+:root{
+  --bg:#f8f8f3;--ink:#111312;--ink-soft:#3a3d3a;--muted:#69716b;--line:#e1e5dc;
+  --cream:#FAF5EE;--lime:#c9ff4a;--green:#0f8e5f;--green-deep:#0a6d48;
+  --coral:#FF7E6B;--coral-deep:#FF6347;--peach:#FFB89B;
+  --terracotta:#D08C68;--terr-soft:#E8B795;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;overflow-x:hidden}
+
+/* Cursor glow on hero */
+.cursor-glow{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(255,126,107,.15),transparent 60%);pointer-events:none;z-index:1;transform:translate(-50%,-50%);transition:opacity .3s;opacity:0}
+.cursor-glow.show{opacity:1}
+@media(max-width:768px){.cursor-glow{display:none}}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+@media(max-width:560px){.wrap{padding:0 18px}}
+
+/* Nav */
+.nav{height:88px;display:flex;align-items:center;justify-content:space-between}
+@media(max-width:560px){.nav{height:68px}}
+.brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:900;letter-spacing:-.04em;color:var(--ink);text-decoration:none}
+@media(max-width:560px){.brand{font-size:18px}}
+.mark{width:36px;height:36px;border-radius:50%;background:linear-gradient(145deg,#E8B795,#D08C68);display:grid;place-items:center;flex:0 0 auto;box-shadow:0 4px 12px rgba(208,140,104,.3)}
+.mark svg{width:36px;height:36px}
+@media(max-width:560px){.mark{width:32px;height:32px}.mark svg{width:32px;height:32px}}
+.links{display:flex;align-items:center;gap:6px}
+.links a{color:var(--muted);font-size:14px;font-weight:600;text-decoration:none;padding:8px 14px;border-radius:999px;transition:color .2s}
+.links a:hover{color:var(--ink)}
+@media(max-width:680px){.links a:not(.btn){display:none}}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:13px 20px;border:none;border-radius:999px;font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn.lime{background:var(--lime);color:var(--ink)}
+.btn.lime:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(201,255,74,.4)}
+.btn.coral{background:var(--coral);color:#fff}
+.btn.coral:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,126,107,.4)}
+.btn.white{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.btn.white:hover{transform:translateY(-2px)}
+
+/* Hero */
+.hero{padding:40px 0 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
+@media(max-width:880px){.hero{grid-template-columns:1fr;gap:40px;padding:20px 0 60px;text-align:center}}
+.eyebrow{font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:18px;display:inline-block}
+.eyebrow.coral{color:var(--coral-deep)}
+h1{font-size:clamp(38px,7vw,72px);line-height:1;letter-spacing:-.04em;font-weight:900;color:var(--ink);margin-bottom:20px}
+h1 em{font-style:italic;font-weight:600;color:var(--green);background:linear-gradient(120deg,var(--green) 0%,var(--coral) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.lead{font-size:clamp(15px,1.8vw,18px);color:var(--muted);line-height:1.55;margin-bottom:28px;max-width:540px}
+@media(max-width:880px){.lead{margin-left:auto;margin-right:auto}}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+@media(max-width:880px){.hero-actions{justify-content:center}}
+.small{font-size:13px;color:var(--muted)}
+
+/* Phone visual */
+.visual{display:flex;justify-content:center;align-items:center}
+.phone{width:300px;height:608px;background:var(--ink);border-radius:42px;padding:8px;box-shadow:0 30px 70px rgba(46,42,38,.32);position:relative}
+.phone::before{content:'';position:absolute;top:18px;left:50%;transform:translateX(-50%);width:96px;height:20px;background:var(--ink);border-radius:12px;z-index:50}
+.screen{width:100%;height:100%;border-radius:34px;overflow:hidden;background:linear-gradient(180deg,#FAF5EE,#F3EADB);padding:44px 18px 18px;display:flex;flex-direction:column;position:relative}
+@media(max-width:560px){.phone{width:280px;height:570px}.screen{padding:40px 16px 16px}}
+.chat{display:flex;gap:9px;align-items:flex-start;margin-bottom:10px}
+.mood-av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex:0 0 auto;box-shadow:0 6px 14px rgba(17,19,18,.12);transition:background .35s}
 .mood-av svg{width:46px;height:46px}
-.mood-av.big{width:78px;height:78px;animation:breathe 4s ease-in-out infinite}
-.mood-av.big svg{width:78px;height:78px}
-@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
-.coming-soon{position:absolute;top:14px;right:14px;background:var(--ink);color:var(--lime);font-size:9px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:999px;z-index:3}
-.card{position:relative}
+.bubble{background:#fff;border-radius:14px 14px 14px 4px;padding:9px 11px;font-size:12.5px;line-height:1.4;color:var(--ink);box-shadow:0 4px 12px rgba(0,0,0,.06);flex:1}
+.phone-label{display:inline-block;background:rgba(15,142,95,.12);color:var(--green-deep);font-size:9.5px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border-radius:8px;margin:8px 0 8px;width:fit-content}
+.phone-title{font-size:22px;font-weight:900;letter-spacing:-.02em;color:var(--ink);line-height:1.1;margin-bottom:8px}
+.recognition{font-size:11.5px;color:var(--muted);font-style:italic;margin-bottom:10px;line-height:1.4}
+.task{background:#fff;border-radius:12px;padding:8px 10px;margin-bottom:6px;display:flex;gap:8px;align-items:flex-start;box-shadow:0 3px 8px rgba(0,0,0,.04)}
+.task .icon{font-size:18px;line-height:1;margin-top:2px}
+.task small{font-size:8.5px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+.task b{font-size:12px;font-weight:800;color:var(--ink);display:block;margin-bottom:1px}
+.task p{font-size:10.5px;color:var(--muted);line-height:1.35}
+
+/* Hero animated glow behind phone */
+.visual::before{content:'';position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(255,126,107,.18),transparent 60%);z-index:-1;animation:pulse 6s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.8}50%{transform:scale(1.15);opacity:1}}
+
+/* Marquee */
+.marquee{padding:30px 0;background:var(--ink);overflow:hidden;position:relative}
+.marquee-track{display:flex;gap:50px;animation:scroll 30s linear infinite;white-space:nowrap;width:max-content}
+.marquee-item{color:#fff;font-size:clamp(28px,5vw,52px);font-weight:900;letter-spacing:-.03em;display:flex;align-items:center;gap:50px}
+.marquee-item::after{content:'·';color:var(--lime)}
+.marquee-item.coral{background:linear-gradient(90deg,var(--coral),var(--peach));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-style:italic}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* Sections */
+section{padding:90px 0;position:relative}
+@media(max-width:560px){section{padding:60px 0}}
+.center{text-align:center}
+h2{font-size:clamp(32px,5vw,56px);line-height:1.05;letter-spacing:-.03em;font-weight:900;color:var(--ink);margin-bottom:18px}
+h2 em{font-style:italic;font-weight:500;color:var(--green);background:linear-gradient(120deg,var(--green) 0%,var(--coral) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.lead.center{max-width:560px;margin-left:auto;margin-right:auto;text-align:center}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:translateY(0)}
+
+/* Demo */
+.demo{background:#fff;border-radius:32px;padding:50px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;box-shadow:0 20px 60px rgba(0,0,0,.06)}
+@media(max-width:880px){.demo{grid-template-columns:1fr;padding:32px 24px;gap:32px}}
+@media(max-width:560px){.demo{padding:26px 20px}}
+.demo .left h2{text-align:left;font-size:clamp(26px,4vw,40px)}
+.demo .left .eyebrow{display:inline-block}
+.demo .left .lead{text-align:left;margin-bottom:24px;font-size:15px}
+@media(max-width:880px){.demo .left{text-align:center}.demo .left h2,.demo .left .lead{text-align:center}.demo .left .lead{margin-left:auto;margin-right:auto}}
+.label{font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--coral-deep);margin:18px 0 8px}
+.chiprow{display:flex;flex-wrap:wrap;gap:7px}
+.chip{background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:9px 14px;font-size:13.5px;font-weight:700;color:var(--ink);cursor:pointer;transition:all .2s;font-family:inherit}
+.chip:hover{border-color:var(--green)}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink);transform:scale(1.04)}
+
+/* Loops */
+.loops{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}
+@media(max-width:880px){.loops{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.loops{grid-template-columns:1fr}}
+.loop-card{background:#fff;border-radius:22px;padding:24px;border:1px solid var(--line);transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
+.loop-card::before{content:'';position:absolute;top:0;left:0;right:0;height:6px}
+.loop-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.08)}
+.loop-card h3{font-size:20px;font-weight:900;letter-spacing:-.01em;margin-bottom:6px}
+.loop-card p{font-size:13px;color:var(--muted);margin-bottom:14px}
+.loop-card ul{list-style:none;padding:0}
+.loop-card li{font-size:13.5px;color:var(--ink-soft);padding:5px 0;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(0,0,0,.04)}
+.loop-card li:last-child{border-bottom:none}
+.loop-card.mint{background:linear-gradient(165deg,#D4F2DD,#A8E0B8)} .loop-card.mint::before{background:#6FA382}
+.loop-card.peach{background:linear-gradient(165deg,#FFE0CC,#FFC9A8)} .loop-card.peach::before{background:#E89766}
+.loop-card.lavender{background:linear-gradient(165deg,#E6DCFA,#C9B8F0)} .loop-card.lavender::before{background:#9B7FD4}
+.loop-card.sky{background:linear-gradient(165deg,#D4E5F2,#A8C9E0)} .loop-card.sky::before{background:#6890B5}
+
+/* Vibe cards */
+/* Vibe cards — tall portrait pastels */
+.vibegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}
+@media(max-width:880px){.vibegrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.vibegrid{grid-template-columns:repeat(2,1fr);gap:10px}}
+.vibe{aspect-ratio:3/4;border-radius:24px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 14px 36px rgba(0,0,0,.1);transition:transform .35s cubic-bezier(.34,1.56,.64,1);position:relative;overflow:hidden;cursor:default}
+.vibe:hover{transform:translateY(-10px) rotate(-1.5deg)}
+.vibe:nth-child(even):hover{transform:translateY(-10px) rotate(1.5deg)}
+.vibe-head{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2}
+.vibe-brand{font-size:9.5px;letter-spacing:.18em;font-weight:900;color:var(--ink);text-transform:uppercase;opacity:.55}
+.vibe-icon{width:42px;height:42px;background:rgba(255,255,255,.55);border-radius:14px;display:grid;place-items:center;font-size:20px;backdrop-filter:blur(4px)}
+.vibe-text{font-size:clamp(20px,2.5vw,28px);font-weight:900;letter-spacing:-.03em;line-height:1;color:var(--ink);position:relative;z-index:2}
+.vibe-foot{font-size:9.5px;letter-spacing:.16em;font-weight:900;color:var(--ink);text-transform:uppercase;opacity:.6;position:relative;z-index:2}
+.vibe1{background:linear-gradient(155deg,#C9FF4A,#A8E83C)}
+.vibe2{background:linear-gradient(155deg,#D8C9F5,#B8A4ED)}
+.vibe3{background:linear-gradient(155deg,#FFD9C2,#FFB893)}
+.vibe4{background:linear-gradient(155deg,#B8E8C2,#8FD49B)}
+
+/* What's Coming (mystery) */
+.coming{padding:90px 0;background:linear-gradient(180deg,transparent,rgba(255,126,107,.04),transparent)}
+.coming h2{margin-bottom:14px}
+.tease-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:46px;max-width:1000px;margin-left:auto;margin-right:auto}
+@media(max-width:780px){.tease-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.tease-grid{grid-template-columns:1fr;max-width:320px}}
+.tease{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px 26px;text-align:left;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s;cursor:default;min-height:160px;display:flex;flex-direction:column;justify-content:space-between}
+.tease:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(0,0,0,.07);border-color:rgba(255,126,107,.4)}
+.tease::after{content:'';position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,rgba(255,126,107,.08),transparent);transition:transform .4s}
+.tease:hover::after{transform:scale(1.5)}
+.tease .num{font-family:Inter;font-size:11px;font-weight:900;letter-spacing:.14em;color:var(--coral-deep);margin-bottom:16px}
+.tease h4{font-size:22px;font-weight:900;letter-spacing:-.02em;color:var(--ink);line-height:1.15}
+.coming-foot{margin-top:48px;text-align:center}
+.coming-foot p{font-size:16px;color:var(--ink-soft);margin-bottom:18px;font-weight:600}
+.coming-foot b{color:var(--coral-deep)}
+
+/* Founding members section */
+.founding{background:linear-gradient(135deg,#fff 0%,rgba(255,126,107,.08) 100%);border-radius:32px;padding:60px 50px;margin:50px 0}
+@media(max-width:560px){.founding{padding:40px 24px;margin:30px 0}}
+.founding-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+@media(max-width:780px){.founding-grid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}}
+.found-card{background:#fff;border-radius:18px;padding:22px;border:1.5px solid rgba(255,126,107,.15);position:relative}
+.found-card .badge{position:absolute;top:-10px;left:18px;background:var(--coral);color:#fff;font-size:10px;font-weight:900;letter-spacing:.08em;padding:5px 10px;border-radius:8px;text-transform:uppercase}
+.found-card h4{font-size:16px;font-weight:900;margin-top:8px;margin-bottom:6px}
+.found-card p{font-size:13.5px;color:var(--muted);line-height:1.5}
+.premium-hint{margin-top:36px;text-align:center;padding:24px;background:var(--ink);border-radius:20px;color:#fff}
+.premium-hint .ph-eye{font-size:10.5px;font-weight:900;letter-spacing:.16em;color:var(--lime);text-transform:uppercase;margin-bottom:8px}
+.premium-hint h4{font-size:clamp(20px,3vw,28px);font-weight:900;letter-spacing:-.02em;margin-bottom:6px}
+.premium-hint p{font-size:14px;color:rgba(255,255,255,.7);font-style:italic}
+
+/* Waitlist */
+.wait{background:var(--ink);border-radius:32px;padding:60px 50px;color:#fff;position:relative;overflow:hidden}
+@media(max-width:560px){.wait{padding:42px 24px}}
+.wait::before{content:'';position:absolute;top:-30%;right:-10%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,126,107,.2),transparent 60%)}
+.wait-inner{max-width:520px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.wait h2{color:#fff}
+.wait h2 em{background:linear-gradient(120deg,var(--lime) 0%,var(--coral) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.wait .lead{color:rgba(255,255,255,.7);margin:0 auto 32px}
+.wait .eyebrow{color:var(--lime)}
+form{display:flex;flex-direction:column;gap:12px;text-align:left}
+form label{font-size:11.5px;font-weight:900;letter-spacing:.1em;color:var(--coral);text-transform:uppercase;margin:6px 0 -4px 2px}
+input,select{width:100%;padding:15px 16px;border:1.5px solid rgba(255,255,255,.15);border-radius:14px;font-size:14.5px;font-family:inherit;background:rgba(255,255,255,.05);color:#fff}
+input:focus,select:focus{outline:none;border-color:var(--coral);background:rgba(255,255,255,.1)}
+input::placeholder{color:rgba(255,255,255,.4)}
+select option{background:#1f1c19;color:#fff}
+form .btn{width:100%;justify-content:center;padding:17px;font-size:15px;margin-top:6px}
+.note{font-size:11.5px;color:rgba(255,255,255,.5);margin-top:14px;text-align:center;line-height:1.5}
+.note a{color:var(--coral);text-decoration:underline}
+.success{display:none;background:rgba(201,255,74,.15);border:1.5px solid var(--lime);border-radius:16px;padding:24px;color:#fff;text-align:center}
+.success.show{display:block}
+.success b{display:block;font-size:22px;font-weight:900;color:var(--lime);margin-bottom:6px}
+
+/* Footer */
+footer{padding:40px 0 30px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+footer .brand{justify-content:center;margin-bottom:12px}
+footer .mark{width:30px;height:30px}
+footer .mark svg{width:30px;height:30px}
+.footlinks{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:14px 0}
+.footlinks a{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px}
+.footlinks a:hover{color:var(--coral-deep)}
+.tiny{font-size:11px;color:#9aa19c;margin-top:14px;line-height:1.6;max-width:540px;margin-left:auto;margin-right:auto}
+.tiny b{color:var(--ink)}
+
+/* Mobile breakpoints */
+@media(max-width:560px){
+  h1{font-size:42px}
+  .hero{padding:10px 0 40px}
+  .demo{padding:24px 18px}
+  .label{margin:14px 0 6px}
+  .chip{padding:8px 12px;font-size:13px}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-<nav class="nav"><a class="brand" href="#"><span class="mark"><svg viewBox="0 0 96 96"><circle cx="38" cy="42" r="4" fill="#fff"/><circle cx="58" cy="42" r="4" fill="#fff"/><path d="M37 56 Q48 63 59 56" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></span>Loop-You</a><div class="links"><a href="#demo">Demo</a><a href="#loops">Today’s Loop</a><a href="#cards">Vibe Cards</a><a href="#waitlist" class="btn lime">Join waitlist</a></div></nav>
-<section class="hero"><div><div class="eyebrow">Launching September 2026</div><h1>Check your vibe. Get today’s Loop.</h1><p class="lead">Loop-You turns your mood into a simple daily plan for fitness, food, skincare and music — without pressure, guilt or complicated tracking.</p><div class="hero-actions"><a class="btn lime" href="#waitlist">Join the waitlist →</a><a class="btn white" href="#demo">Try the demo</a></div><p class="small">free during beta · a daily wellness friend for your real mood, real routine, real day.</p><div class="hero-tags"><span class="tagpill">Morning Vibe Check</span><span class="tagpill">Fitness</span><span class="tagpill">Food ideas</span><span class="tagpill">Skincare reset</span><span class="tagpill">Music by mood</span></div><div class="hero-stats"><div class="stat"><b>10s</b><span>vibe check</span></div><div class="stat"><b>4</b><span>daily suggestions</span></div><div class="stat"><b>£0</b><span>during beta</span></div></div></div><div class="visual"><div class="phone"><div class="screen"><div class="chat"><span class="mood-av" id="heroAv"></span><div class="bubble">morning. yesterday felt heavy — today can be softer 🌿</div></div><span class="phone-label">Today’s Loop</span><div class="phone-title">Soft Reset Day</div><p class="recognition">“low energy doesn't mean no progress. let's keep it light.”</p><div class="task"><span class="icon">🚶</span><div><small>fitness</small><b>15-min walk</b><p>Easy pace. No performance goal.</p></div></div><div class="task"><span class="icon">🥣</span><div><small>food idea</small><b>Simple fuel</b><p>Toast + eggs, yoghurt + banana, lentil bowl, or tuna wrap.</p></div></div><div class="task"><span class="icon">🧴</span><div><small>skincare reset</small><b>Clean + hydrate</b><p>Wash face, moisturise, SPF if going out. Keep it simple.</p></div></div><div class="task"><span class="icon">🎧</span><div><small>music mood</small><b>Calm playlist</b><p>Lo-fi, soft pop, slow walk, or reset mood.</p></div></div><div class="memory"><small>Loop Wake</small><p>Set tomorrow’s check-in. Loop starts with you again.</p></div></div></div></div></section>
-<section id="how" class="center"><div class="eyebrow">How it works</div><h2>Morning. Today’s Loop. Night reflection.</h2><p class="lead">No heavy dashboard. No strict routine. Just a simple daily flow that fits real life.</p><div class="grid4"><div class="card"><div class="num">001</div><h3>Morning Vibe Check</h3><p>Sleep, energy, mood and your day type in around 10 seconds.</p></div><div class="card"><div class="num">002</div><h3>Today’s Loop</h3><p>A simple plan for fitness, food, skincare and music based on your mood.</p></div><div class="card"><div class="num">003</div><h3>Night Reflection</h3><p>A short check-in at night. What worked? What should tomorrow feel like?</p></div><div class="card"><div class="num">004</div><h3>Loop Wake</h3><p>Choose when Loop checks in tomorrow. Build rhythm without pressure.</p></div></div></section>
-<section id="demo"><div class="demo"><div><div class="eyebrow">Try it live</div><h2>Change the mood. The Loop changes.</h2><p class="lead">Choose how the day feels. Loop-You gives simple suggestions for fitness, food, skincare and music — all based on the day.</p><div class="label">Sleep</div><div class="chiprow"><button class="chip" onclick="setMood('sleep','bad',this)">bad</button><button class="chip on" onclick="setMood('sleep','okay',this)">okay</button><button class="chip" onclick="setMood('sleep','good',this)">good</button></div><div class="label">Energy</div><div class="chiprow"><button class="chip on" onclick="setMood('energy','low',this)">low</button><button class="chip" onclick="setMood('energy','medium',this)">medium</button><button class="chip" onclick="setMood('energy','high',this)">high</button></div><div class="label">Mood</div><div class="chiprow"><button class="chip on" onclick="setMood('mood','stressed',this)">stressed</button><button class="chip" onclick="setMood('mood','normal',this)">normal</button><button class="chip" onclick="setMood('mood','good',this)">good</button></div><div class="label">Today</div><div class="chiprow"><button class="chip" onclick="setMood('day','class',this)">class/work</button><button class="chip" onclick="setMood('day','gym',this)">gym</button><button class="chip" onclick="setMood('day','goingout',this)">going out</button><button class="chip on" onclick="setMood('day','free',this)">free</button></div></div><div class="demo-phone"><div class="demo-screen"><div class="chat"><span class="mood-av" id="demoAvFace"></span><div class="bubble" id="demoBubble">today can be softer. still useful.</div></div><span class="phone-label" id="demoLabel">Soft Reset Loop</span><div class="phone-title" id="demoTitle">Move lightly.<br>Reset slowly.</div><p class="recognition" id="demoRecognise">“low energy doesn't mean no progress.”</p><div class="task"><span class="icon" id="fitIcon">🚶</span><div><small>fitness</small><b id="fitTitle">15-min walk</b><p id="fitText">Easy pace. No performance goal.</p></div></div><div class="task"><span class="icon">🥣</span><div><small>food</small><b id="foodTitle">Simple fuel</b><p id="foodText">Toast + eggs, yoghurt + banana, or lentil bowl.</p></div></div><div class="task"><span class="icon">🧴</span><div><small>skincare</small><b id="skinTitle">Clean + hydrate</b><p id="skinText">Wash face, moisturise, SPF if going out.</p></div></div><div class="task"><span class="icon">🎧</span><div><small>music</small><b id="musicTitle">Calm playlist</b><p id="musicText">Lo-fi / soft pop / slow walk mood.</p></div></div></div></div></div></section>
 
-<section id="lifestyle" class="center">
-  <div class="eyebrow">What today’s Loop can include</div>
-  <h2>Fitness, food, skincare<br>and music — kept simple.</h2>
-  <p class="lead">Loop-You is not a strict diet app, not a skincare doctor, and not a playlist app. It gives small lifestyle suggestions that fit the mood of the day.</p>
-  <div class="grid4">
-    <div class="card">
-      <div class="num">FIT</div>
-      <h3>Fitness</h3>
-      <p>Walk, gym, run, stretch, recovery, or a short home workout based on energy and mood.</p>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<div class="wrap">
+  <nav class="nav">
+    <a href="#" class="brand"><span class="mark"><svg viewBox="0 0 96 96"><circle cx="38" cy="42" r="4" fill="#fff"/><circle cx="58" cy="42" r="4" fill="#fff"/><path d="M37 56 Q48 63 59 56" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></span>Loop-You</a>
+    <div class="links">
+      <a href="#demo">Demo</a>
+      <a href="#coming">What's coming</a>
+      <a href="#waitlist" class="btn lime">Join waitlist</a>
     </div>
-    <div class="card">
-      <div class="num">FOOD</div>
-      <h3>Food ideas</h3>
-      <p>Affordable, easy suggestions like eggs on toast, yoghurt and banana, tuna wrap, rice bowl, or lentil bowl.</p>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Private beta · UK first</div>
+      <h1>Check your <em>vibe.</em><br>Get today's Loop.</h1>
+      <p class="lead">One simple plan. Fitness, food, skincare and music — based on how you actually feel today.</p>
+      <div class="hero-actions">
+        <a class="btn lime" href="#waitlist">Join the waitlist →</a>
+        <a class="btn white" href="#demo">Try the demo</a>
+      </div>
+      <p class="small">Free during beta · No credit card</p>
     </div>
-    <div class="card" style="opacity:.78">
-      <span class="coming-soon" style="background:var(--lime);color:var(--ink)">Coming soon</span>
-      <div class="num">SKIN</div>
-      <h3>Skincare reset</h3>
-      <p>Small reminders like cleanse, moisturise, hydrate, SPF if going out, or post-workout face refresh.</p>
+    <div class="visual">
+      <div class="phone">
+        <div class="screen">
+          <div class="chat">
+            <span class="mood-av" id="heroAv"></span>
+            <div class="bubble">morning. yesterday felt heavy — today can be softer 🌿</div>
+          </div>
+          <span class="phone-label">Today's Loop</span>
+          <div class="phone-title">Soft Reset Day</div>
+          <p class="recognition">"low energy doesn't mean no progress. let's keep it light."</p>
+          <div class="task"><span class="icon">🚶</span><div><small>fitness</small><b>15-min walk</b><p>Easy pace. No performance goal.</p></div></div>
+          <div class="task"><span class="icon">🥣</span><div><small>food idea</small><b>Simple fuel</b><p>Toast + eggs, yoghurt + banana, lentil bowl.</p></div></div>
+          <div class="task"><span class="icon">🧴</span><div><small>skincare</small><b>Clean + hydrate</b><p>Wash face, moisturise, SPF if out.</p></div></div>
+          <div class="task"><span class="icon">🎧</span><div><small>music</small><b>Calm playlist</b><p>Lo-fi, soft pop, slow walk mood.</p></div></div>
+        </div>
+      </div>
     </div>
-    <div class="card" style="opacity:.78">
-      <span class="coming-soon" style="background:var(--lime);color:var(--ink)">Coming soon</span>
-      <div class="num">MUSIC</div>
-      <h3>Music by mood</h3>
-      <p>Calm playlist, focus playlist, gym energy, run rhythm, confidence music, or slow reset mood.</p>
+  </section>
+</div>
+
+<!-- MARQUEE BAND -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-item">Soft Reset</span>
+    <span class="marquee-item coral">Locked In</span>
+    <span class="marquee-item">Social Day</span>
+    <span class="marquee-item coral">Study Loop</span>
+    <span class="marquee-item">No Guilt</span>
+    <span class="marquee-item coral">Mood First</span>
+    <span class="marquee-item">Soft Reset</span>
+    <span class="marquee-item coral">Locked In</span>
+    <span class="marquee-item">Social Day</span>
+    <span class="marquee-item coral">Study Loop</span>
+    <span class="marquee-item">No Guilt</span>
+    <span class="marquee-item coral">Mood First</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- DEMO -->
+  <section id="demo" class="reveal">
+    <div class="demo">
+      <div class="left">
+        <div class="eyebrow">Try it live</div>
+        <h2>Change the mood.<br>The Loop <em>changes.</em></h2>
+        <p class="lead">Move the chips. Watch your plan rewrite in real time.</p>
+        <div class="label">Sleep</div>
+        <div class="chiprow"><button class="chip" onclick="setMood('sleep','bad',this)">bad</button><button class="chip on" onclick="setMood('sleep','okay',this)">okay</button><button class="chip" onclick="setMood('sleep','good',this)">good</button></div>
+        <div class="label">Energy</div>
+        <div class="chiprow"><button class="chip on" onclick="setMood('energy','low',this)">low</button><button class="chip" onclick="setMood('energy','medium',this)">medium</button><button class="chip" onclick="setMood('energy','high',this)">high</button></div>
+        <div class="label">Mood</div>
+        <div class="chiprow"><button class="chip on" onclick="setMood('mood','stressed',this)">stressed</button><button class="chip" onclick="setMood('mood','normal',this)">normal</button><button class="chip" onclick="setMood('mood','good',this)">good</button></div>
+        <div class="label">Today</div>
+        <div class="chiprow"><button class="chip" onclick="setMood('day','class',this)">class/work</button><button class="chip" onclick="setMood('day','gym',this)">gym</button><button class="chip" onclick="setMood('day','goingout',this)">going out</button><button class="chip on" onclick="setMood('day','free',this)">free</button></div>
+      </div>
+      <div class="visual">
+        <div class="phone">
+          <div class="screen">
+            <div class="chat"><span class="mood-av" id="demoAvFace"></span><div class="bubble" id="demoBubble">today can be softer. still useful.</div></div>
+            <span class="phone-label" id="demoLabel">Soft Reset Loop</span>
+            <div class="phone-title" id="demoTitle">Move lightly.<br>Reset slowly.</div>
+            <p class="recognition" id="demoRecognise">"low energy doesn't mean no progress."</p>
+            <div class="task"><span class="icon" id="fitIcon">🚶</span><div><small>fitness</small><b id="fitTitle">15-min walk</b><p id="fitText">Easy pace. No performance goal.</p></div></div>
+            <div class="task"><span class="icon">🥣</span><div><small>food</small><b id="foodTitle">Simple fuel</b><p id="foodText">Toast + eggs, yoghurt + banana, or lentil bowl.</p></div></div>
+            <div class="task"><span class="icon">🧴</span><div><small>skincare</small><b id="skinTitle">Clean + hydrate</b><p id="skinText">Wash face, moisturise, SPF if going out.</p></div></div>
+            <div class="task"><span class="icon">🎧</span><div><small>music</small><b id="musicTitle">Calm playlist</b><p id="musicText">Lo-fi / soft pop / slow walk mood.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOPS -->
+  <section id="loops" class="reveal">
+    <div class="center">
+      <div class="eyebrow">Four kinds of days</div>
+      <h2>Different day. <em>Different Loop.</em></h2>
+    </div>
+    <div class="loops">
+      <div class="loop-card mint"><h3>Soft Reset</h3><p>Tired or stressed mornings.</p><ul><li>15-min walk</li><li>easy food idea</li><li>clean + hydrate</li><li>calm playlist</li></ul></div>
+      <div class="loop-card peach"><h3>Locked In</h3><p>Fresh days, ready to train.</p><ul><li>30-min gym or run</li><li>protein food</li><li>post-workout glow</li><li>high-energy playlist</li></ul></div>
+      <div class="loop-card lavender"><h3>Social Day</h3><p>Going out, dancing, dressing up.</p><ul><li>12-min home pump</li><li>water + light food</li><li>simple glow reset</li><li>confidence playlist</li></ul></div>
+      <div class="loop-card sky"><h3>Study / Work</h3><p>Class, deadlines, desk days.</p><ul><li>movement breaks</li><li>cheap lunch idea</li><li>face refresh</li><li>focus playlist</li></ul></div>
+    </div>
+  </section>
+
+  <!-- VIBE CARDS -->
+  <section id="cards" class="center reveal">
+    <div class="eyebrow">Vibe Story Cards</div>
+    <h2>Turn your day <em>into a vibe.</em></h2>
+    <p class="lead center">Built to share after a run, walk, gym day, or soft reset.</p>
+    <div class="vibegrid">
+      <div class="vibe vibe1">
+        <div class="vibe-head"><span class="vibe-brand">LOOP-YOU</span><span class="vibe-icon">🏃</span></div>
+        <div class="vibe-text">22 mins.<br>feeling<br>lighter.</div>
+        <span class="vibe-foot">CLEAR MIND RUN</span>
+      </div>
+      <div class="vibe vibe2">
+        <div class="vibe-head"><span class="vibe-brand">LOOP-YOU</span><span class="vibe-icon">🌧️</span></div>
+        <div class="vibe-text">rainy walk.<br>calmer<br>head.</div>
+        <span class="vibe-foot">SOFT RESET</span>
+      </div>
+      <div class="vibe vibe3">
+        <div class="vibe-head"><span class="vibe-brand">LOOP-YOU</span><span class="vibe-icon">🏋️</span></div>
+        <div class="vibe-text">quick pump.<br>no guilt.</div>
+        <span class="vibe-foot">LOCKED IN</span>
+      </div>
+      <div class="vibe vibe4">
+        <div class="vibe-head"><span class="vibe-brand">LOOP-YOU</span><span class="vibe-icon">🌿</span></div>
+        <div class="vibe-text">low energy.<br>still showed<br>up.</div>
+        <span class="vibe-foot">RESET LOOP</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- WHAT'S COMING (MYSTERY) -->
+<section id="coming" class="coming center reveal">
+  <div class="wrap">
+    <div class="eyebrow coral">More coming</div>
+    <h2>Six things <em>you'll feel first.</em></h2>
+    <div class="tease-grid">
+      <div class="tease"><div class="num">001</div><h4>Talk, don't type.</h4></div>
+      <div class="tease"><div class="num">002</div><h4>Skin, that reads the day.</h4></div>
+      <div class="tease"><div class="num">003</div><h4>Sound for the mood.</h4></div>
+      <div class="tease"><div class="num">004</div><h4>Dressed for the day.</h4></div>
+      <div class="tease"><div class="num">005</div><h4>Your week, one card.</h4></div>
+      <div class="tease"><div class="num">006</div><h4>Loops that find yours.</h4></div>
+    </div>
+    <div class="coming-foot">
+      <p>Join first. See first. <b>Get in early.</b></p>
+      <a class="btn coral" href="#waitlist">Get in early →</a>
     </div>
   </div>
 </section>
 
-<section id="loops"><div class="center"><div class="eyebrow">Today’s Loop examples</div><h2>Different day. Different Loop.</h2><p class="lead">Loop-You should feel personal from day one.</p></div><div class="loops"><div class="loop-card"><h3>Soft Reset Loop</h3><p>For tired or stressed mornings.</p><ul><li>15-min walk</li><li>easy food idea</li><li>clean + hydrate skincare</li><li>calm playlist</li></ul></div><div class="loop-card"><h3>Locked In Loop</h3><p>For fresh days when the user wants to train.</p><ul><li>30-min gym or run</li><li>protein food idea</li><li>post-workout face refresh</li><li>high-energy playlist</li></ul></div><div class="loop-card"><h3>Social Day Loop</h3><p>For weekends, dancing, clubbing or going out.</p><ul><li>12-min home workout</li><li>water before going out</li><li>simple skincare glow reset</li><li>confidence playlist</li></ul></div><div class="loop-card"><h3>Study / Work Loop</h3><p>For class, deadlines and long desk days.</p><ul><li>movement breaks</li><li>cheap lunch idea</li><li>face refresh</li><li>focus playlist</li></ul></div></div></section>
-<section id="cards" class="center"><div class="eyebrow">Vibe Story Cards</div><h2>Turn your day into a vibe.</h2><p class="lead">Share your run, gym, walk or reset — without making it feel like a fitness flex.</p><div class="vibegrid">
-<div class="vibe"><div style="display:flex;align-items:center;gap:8px;"><span class="mood-av" id="vcav1" style="width:32px;height:32px;"></span><small style="font-size:11px;letter-spacing:.14em;">LOOP-YOU</small></div><b style="font-size:30px;line-height:1;letter-spacing:-.06em;">low energy.<br>still showed up.</b><small style="text-align:right;">soft reset loop</small></div>
-<div class="vibe"><div style="display:flex;align-items:center;gap:8px;"><span class="mood-av" id="vcav2" style="width:32px;height:32px;"></span><small style="font-size:11px;letter-spacing:.14em;">LOOP-YOU</small></div><b style="font-size:30px;line-height:1;letter-spacing:-.06em;">22 mins.<br>feeling lighter.</b><small style="text-align:right;">clear mind run</small></div>
-<div class="vibe"><div style="display:flex;align-items:center;gap:8px;"><span class="mood-av" id="vcav3" style="width:32px;height:32px;"></span><small style="font-size:11px;letter-spacing:.14em;">LOOP-YOU</small></div><b style="font-size:30px;line-height:1;letter-spacing:-.06em;">quick pump.<br>no guilt.</b><small style="text-align:right;">social day loop</small></div>
-<div class="vibe"><div style="display:flex;align-items:center;gap:8px;"><span class="mood-av" id="vcav4" style="width:32px;height:32px;"></span><small style="font-size:11px;letter-spacing:.14em;">LOOP-YOU</small></div><b style="font-size:30px;line-height:1;letter-spacing:-.06em;">clean face.<br>calm head.</b><small style="text-align:right;">glow reset</small></div>
-</div></section>
-<section class="center"><div class="eyebrow">Privacy promise</div><h2>No pressure. No GPS. No medical claims.</h2><p class="lead">Your check-ins stay private. Loop-You gives lifestyle and wellness suggestions only — not diagnosis, therapy or medical advice.</p><div class="grid3"><div class="card"><div class="iconblock">🔒</div><h3>Private check-ins</h3><p>Your mood and daily answers are not posted publicly.</p></div><div class="card"><div class="iconblock">📍</div><h3>No GPS sharing</h3><p>We're not building live location matching at launch.</p></div><div class="card"><div class="iconblock">⚕️</div><h3>Not medical advice</h3><p>Loop-You supports habits. It does not diagnose, treat or prescribe.</p></div></div></section>
-<section id="next" class="center next-section"><div class="eyebrow">What's next for Loop</div><h2>Already here. <em style="font-style:italic;font-weight:500;color:var(--green)">More coming.</em></h2><p class="lead">Loop launches with mood, fitness and food. These join the family next — shaped by the people who join first.</p><div class="next-grid">
-<div class="next-card"><span class="ne">🎤</span><h4>Loop Voice</h4><p>Talk to Loop. No typing. Feels like a friend texting back — but spoken.</p><span class="next-tag">In development</span></div>
-<div class="next-card"><span class="ne">🧴</span><h4>Skincare Reset</h4><p>Simple skin routines that match how your skin actually feels today.</p><span class="next-tag">Coming soon</span></div>
-<div class="next-card"><span class="ne">🎧</span><h4>Music by Mood</h4><p>One playlist per Loop. Made for the day you're actually having.</p><span class="next-tag">Coming soon</span></div>
-<div class="next-card"><span class="ne">👕</span><h4>Style by Day</h4><p>Cosy lecture fit. Soft run kit. Party-night look. Loop suggests what to wear for the day you've got.</p><span class="next-tag">Coming soon</span></div>
-<div class="next-card"><span class="ne">📊</span><h4>Weekly Recap</h4><p>Your week, your vibe, your wins — in a card worth sharing.</p><span class="next-tag">Coming soon</span></div>
-<div class="next-card"><span class="ne">🌱</span><h4>Loop Communities</h4><p>Gym Loop. Run Loop. Study Loop. Show up together, not against each other.</p><span class="next-tag">Later in beta</span></div>
-</div><p class="next-line">Loop is built with the first 500 members. <b>Your answers in the waitlist shape what gets built first.</b></p></section>
-<section id="waitlist"><div class="wait"><div class="wait-inner"><div class="eyebrow" style="color:var(--lime)">Private beta</div><h2>Join the first Loop-You users.</h2><p class="lead">First 500 members get Loop Plus free for the first year when premium launches.</p><form id="waitlistForm" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="a6140966-dd3d-4259-ab6f-9f019828601b"><input type="hidden" name="from_name" value="Loop-You Waitlist"><input type="checkbox" name="botcheck" style="display:none"><input type="text" name="name" placeholder="your name" required><input type="email" name="email" placeholder="your email" required><label>Age range</label><select name="age_range" required><option value="">pick one...</option><option>18–20</option><option>21–23</option><option>24–27</option><option>28+</option></select><label>Main interest</label><select name="main_interest" required><option value="">pick one...</option><option>gym</option><option>running</option><option>walking</option><option>food ideas</option><option>skincare reset</option><option>music based on mood</option><option>study routine</option></select><label>Which feature would you wait for most?</label><select name="most_wanted_feature" required><option value="">pick one...</option><option>mood-based daily plan</option><option>food ideas that match my day</option><option>skincare reset routines (coming soon)</option><option>music playlists by mood (coming soon)</option><option>style/outfit suggestions for the day (coming soon)</option><option>voice assistant (in development)</option><option>weekly recap cards (coming soon)</option><option>loop communities (later in beta)</option></select><input type="hidden" name="subject" value="New Loop-You waitlist signup"><button class="btn lime" type="submit" style="width:100%;border-radius:18px;margin-top:6px">Get early access</button><p class="note">By joining, you agree to our <a href="privacy.html">Privacy Notice</a> & <a href="terms.html">Terms</a>. We never sell your data.</p></form><div class="success" id="successMsg"><b>You're in.</b>Welcome to Loop-You. We'll message you when beta invites open.</div></div></div></section>
-<section id="privacy" class="center"><div class="eyebrow">Safety and privacy</div><h2>Clear about your data.</h2><p class="lead">Plain English, no dark patterns. Full versions linked below.</p><div class="privacy"><div class="card"><h3>Privacy</h3><p>We collect your name, email and short waitlist answers to invite you into beta. We never sell your data. Stored securely in the UK/EU. Delete any time — email hello@loop-you.com.</p><a href="privacy.html" style="color:var(--green);font-weight:900;font-size:13px;letter-spacing:.06em;text-transform:uppercase;display:inline-block;margin-top:14px;">Read full notice →</a></div><div class="card"><h3>Terms</h3><p>Joining the waitlist is free and creates no obligation. Features, pricing and launch timing may change before beta. You can unsubscribe at any time.</p><a href="terms.html" style="color:var(--green);font-weight:900;font-size:13px;letter-spacing:.06em;text-transform:uppercase;display:inline-block;margin-top:14px;">Read full terms →</a></div><div class="card"><h3>Not medical advice</h3><p>Loop-You supports daily habits and wellbeing. It does not diagnose, treat or prescribe. If you're struggling, please talk to a professional — your GP or a trusted person.</p></div></div></section>
-<footer><div class="brand"><span class="mark"><svg viewBox="0 0 96 96"><circle cx="38" cy="42" r="4" fill="#fff"/><circle cx="58" cy="42" r="4" fill="#fff"/><path d="M37 56 Q48 63 59 56" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></span>Loop-You</div><p>Cardiff, UK</p><div class="footlinks"><a href="mailto:hello@loop-you.com">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="https://www.tiktok.com/@loop.you" target="_blank" rel="noopener">TikTok</a><a href="https://www.instagram.com/loop.you" target="_blank" rel="noopener">Instagram</a></div><p style="font-size:11px;color:#9aa19c;margin-top:18px;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.6;">If you're in crisis, please reach out: <b>999</b> (emergency) · <b>NHS 111</b> (urgent help) · <b>Samaritans 116 123</b> (24/7 emotional support). Loop-You is not a substitute for professional care.</p></footer>
+<div class="wrap">
+
+  <!-- FOUNDING MEMBERS -->
+  <section class="reveal">
+    <div class="founding">
+      <div class="center">
+        <div class="eyebrow coral">Founding 500</div>
+        <h2>Show up first. <em>Get the most.</em></h2>
+        <p class="lead center">Three ways in.</p>
+      </div>
+      <div class="founding-grid">
+        <div class="found-card"><span class="badge">500 spots</span><h4>Sign up</h4><p>Free Loop Plus when premium drops.</p></div>
+        <div class="found-card"><span class="badge">100 spots</span><h4>Share a vibe card</h4><p>Free Loop Plus + earliest beta.</p></div>
+        <div class="found-card"><span class="badge">50 spots</span><h4>Tag @loop.you</h4><p>Free Loop Plus + a thank-you.</p></div>
+      </div>
+      <div class="premium-hint">
+        <div class="ph-eye">Loop Plus · premium</div>
+        <h4>Your face. Your vibe. <em style="font-style:italic;color:var(--coral)">Your card.</em></h4>
+        <p>Customise vibe cards with your own photo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section id="waitlist" class="reveal">
+    <div class="wait">
+      <div class="wait-inner">
+        <div class="eyebrow">Private beta</div>
+        <h2>Be the <em>first.</em></h2>
+        <p class="lead">Free during beta. No credit card. Founding 500 members get Loop Plus free when premium drops.</p>
+        <form id="waitlistForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="a6140966-dd3d-4259-ab6f-9f019828601b">
+          <input type="hidden" name="from_name" value="Loop-You Waitlist">
+          <input type="hidden" name="subject" value="New Loop-You waitlist signup">
+          <input type="checkbox" name="botcheck" style="display:none">
+          <input type="text" name="name" placeholder="your name" required>
+          <input type="email" name="email" placeholder="your email" required>
+          <label>Age range</label>
+          <select name="age_range" required><option value="">pick one...</option><option>18–20</option><option>21–23</option><option>24–27</option><option>28+</option></select>
+          <label>Main interest</label>
+          <select name="main_interest" required><option value="">pick one...</option><option>gym</option><option>running</option><option>walking</option><option>food ideas</option><option>skincare reset</option><option>music by mood</option><option>style suggestions</option><option>study routine</option></select>
+          <label>What would make Loop-You your daily go-to?</label>
+          <select name="hook" required><option value="">pick one...</option><option>I'm tired of generic fitness apps</option><option>I want my wellness to match my aesthetic</option><option>I want one app instead of five</option><option>The vibe cards look shareable</option><option>The mystery features got me curious</option><option>I just want something that gets me</option></select>
+          <button class="btn coral" type="submit">Get early access →</button>
+          <p class="note">By joining, you agree to our <a href="privacy.html">Privacy Notice</a> & <a href="terms.html">Terms</a>. We never sell your data.</p>
+        </form>
+        <div class="success" id="successMsg"><b>You're in.</b>Welcome to Loop-You. We'll message you when beta invites open.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TINY LEGAL -->
+  <section id="privacy" class="center" style="padding:30px 0 0">
+    <p class="tiny">We never sell your data. Loop-You gives lifestyle suggestions, not medical advice. Read our <a href="privacy.html" style="color:var(--green);font-weight:700">Privacy Notice</a> & <a href="terms.html" style="color:var(--green);font-weight:700">Terms</a>.</p>
+  </section>
+
+  <footer>
+    <div class="brand"><span class="mark"><svg viewBox="0 0 96 96"><circle cx="38" cy="42" r="4" fill="#fff"/><circle cx="58" cy="42" r="4" fill="#fff"/><path d="M37 56 Q48 63 59 56" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></span>Loop-You</div>
+    <p>Cardiff, UK</p>
+    <div class="footlinks">
+      <a href="mailto:hello@loop-you.com">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="https://www.tiktok.com/@loop.you" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.instagram.com/loop.you" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="tiny">If you're in crisis, please reach out: <b>999</b> · <b>NHS 111</b> · <b>Samaritans 116 123</b>. Loop-You is not a substitute for professional care.</p>
+  </footer>
 </div>
+
 <script>
-// ===== mood-avatar (Loop's signature face — same character, mood-reactive) =====
+// Mood avatars
 function avatar(state){
   let bg,eyes,mouth,extra='';
   switch(state){
     case 'tired':bg='linear-gradient(145deg,#B5B0C4,#8E88A6)';eyes='<line x1="34" y1="40" x2="42" y2="40" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/><line x1="54" y1="40" x2="62" y2="40" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>';mouth='<path d="M38 58 Q48 62 58 58" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>';extra='<text x="63" y="33" font-size="15">💤</text>';break;
-    case 'anxious':bg='linear-gradient(145deg,#E6C98F,#D4A659)';eyes='<circle cx="38" cy="42" r="4" fill="#fff"/><circle cx="58" cy="42" r="4" fill="#fff"/>';mouth='<path d="M40 60 Q48 56 56 60" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>';extra='<path d="M32 32 Q37 30 42 33" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M54 33 Q59 30 64 32" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round"/>';break;
+    case 'anxious':bg='linear-gradient(145deg,#E6C98F,#D4A659)';eyes='<circle cx="38" cy="42" r="4" fill="#fff"/><circle cx="58" cy="42" r="4" fill="#fff"/>';mouth='<path d="M40 60 Q48 56 56 60" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>';break;
     case 'stressed':bg='linear-gradient(145deg,#E0A285,#CE7A5C)';eyes='<line x1="33" y1="40" x2="43" y2="43" stroke="#fff" stroke-width="3.3" stroke-linecap="round"/><line x1="63" y1="40" x2="53" y2="43" stroke="#fff" stroke-width="3.3" stroke-linecap="round"/>';mouth='<path d="M40 59 L56 59" stroke="#fff" stroke-width="3.3" stroke-linecap="round"/>';break;
     case 'okay':bg='linear-gradient(145deg,#E8B795,#D08C68)';eyes='<circle cx="38" cy="42" r="4" fill="#fff"/><circle cx="58" cy="42" r="4" fill="#fff"/>';mouth='<path d="M37 56 Q48 63 59 56" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>';break;
     case 'good':bg='linear-gradient(145deg,#9DC3A8,#6FA382)';eyes='<path d="M33 43 Q38 38 43 43" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M53 43 Q58 38 63 43" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>';mouth='<path d="M35 55 Q48 66 61 55" stroke="#fff" stroke-width="3.8" fill="none" stroke-linecap="round"/>';break;
@@ -115,28 +484,46 @@ function avatar(state){
   }
   return `<div style="width:100%;height:100%;border-radius:50%;background:${bg};display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 96 96" style="width:100%;height:100%;">${eyes}${mouth}${extra}</svg></div>`;
 }
-// hero face = warm/okay (the welcoming first impression, not anxious-looking)
+
 document.getElementById('heroAv').innerHTML = avatar('okay');
-// vibe story card avatars — different mood per card
-document.getElementById('vcav1').innerHTML = avatar('tired');
-document.getElementById('vcav2').innerHTML = avatar('good');
-document.getElementById('vcav3').innerHTML = avatar('fresh');
-document.getElementById('vcav4').innerHTML = avatar('calm');
 
-// ===== demo engine — same logic, friendlier voice =====
-let state={sleep:'okay',energy:'low',mood:'stressed',day:'free'};
+// Demo engine
+let st={sleep:'okay',energy:'low',mood:'stressed',day:'free'};
 const loops={
-  soft:{av:'tired',label:'Soft Reset Loop',bubble:'today can be softer. still useful 🌿',title:'move lightly.<br>reset slowly.',rec:'low energy doesn\'t mean no progress.',fitI:'🚶',fitT:'15-min walk',fit:'easy pace. no performance goal.',foodT:'simple fuel',food:'toast + eggs, yoghurt + banana, or lentil bowl.',skinT:'clean + hydrate',skin:'wash face, moisturise, SPF if going out.',musicT:'calm playlist',music:'lo-fi / soft pop / slow walk mood.'},
-  locked:{av:'fresh',label:'Locked In Loop',bubble:'you sound fresh — let\'s use it 💪',title:'train today.<br>keep it clean.',rec:'good energy. make it practical, not extreme.',fitI:'🏋️',fitT:'30-min gym or run',fit:'warm-up, main set, short cooldown.',foodT:'protein + carbs',food:'eggs/toast, chicken wrap, tuna rice, or Greek yoghurt.',skinT:'post-workout refresh',skin:'cleanse after sweat. moisturise. SPF outside.',musicT:'high-energy playlist',music:'afrobeats / house / gym energy.'},
-  social:{av:'good',label:'Social Day Loop',bubble:'going out? keep the rhythm, then enjoy ✨',title:'quick reset.<br>no guilt.',rec:'you can be social and still look after yourself.',fitI:'💃',fitT:'12-min home pump',fit:'bodyweight circuit. done fast.',foodT:'eat before going out',food:'easy meal + water before the night starts.',skinT:'simple glow routine',skin:'cleanse, moisturise, SPF/day or light night refresh.',musicT:'confidence playlist',music:'pop / house / dance-floor energy.'},
-  focus:{av:'calm',label:'Study / Work Loop',bubble:'busy day. small breaks will help 📚',title:'stay steady.<br>don\'t crash.',rec:'you don\'t need a full workout. you need rhythm.',fitI:'⏱️',fitT:'3 movement breaks',fit:'5 mins each: walk, stretch, breathe.',foodT:'cheap lunch idea',food:'wrap, rice bowl, soup + bread, or fruit + yoghurt.',skinT:'face refresh',skin:'water, cleanse if oily, moisturise if dry.',musicT:'focus playlist',music:'deep focus / ambient / low-vocal tracks.'}
+  soft:{av:'tired',label:'Soft Reset Loop',bubble:"today can be softer. still useful 🌿",title:'Move lightly.<br>Reset slowly.',rec:"low energy doesn't mean no progress.",fitI:'🚶',fitT:'15-min walk',fit:'Easy pace. No performance goal.',foodT:'Simple fuel',food:'Toast + eggs, yoghurt + banana, or lentil bowl.',skinT:'Clean + hydrate',skin:'Wash face, moisturise, SPF if going out.',musicT:'Calm playlist',music:'Lo-fi / soft pop / slow walk mood.'},
+  locked:{av:'fresh',label:'Locked In Loop',bubble:"you sound fresh — let's use it 💪",title:'Train today.<br>Keep it clean.',rec:'Good energy. Make it practical, not extreme.',fitI:'🏋️',fitT:'30-min gym or run',fit:'Warm-up, main set, short cooldown.',foodT:'Protein + carbs',food:'Eggs/toast, chicken wrap, tuna rice, or Greek yoghurt.',skinT:'Post-workout refresh',skin:'Cleanse after sweat. Moisturise. SPF outside.',musicT:'High-energy playlist',music:'Afrobeats / house / gym energy.'},
+  social:{av:'good',label:'Social Day Loop',bubble:'going out? keep the rhythm, then enjoy ✨',title:'Quick reset.<br>No guilt.',rec:'You can be social and still look after yourself.',fitI:'💃',fitT:'12-min home pump',fit:'Bodyweight circuit. Done fast.',foodT:'Eat before going out',food:'Easy meal + water before the night starts.',skinT:'Simple glow routine',skin:'Cleanse, moisturise, SPF/day or light night refresh.',musicT:'Confidence playlist',music:'Pop / house / dance-floor energy.'},
+  focus:{av:'calm',label:'Study / Work Loop',bubble:'busy day. small breaks will help 📚',title:'Stay steady.<br>Don\'t crash.',rec:"you don't need a full workout. you need rhythm.",fitI:'⏱️',fitT:'3 movement breaks',fit:'5 mins each: walk, stretch, breathe.',foodT:'Cheap lunch idea',food:'Wrap, rice bowl, soup + bread, or fruit + yoghurt.',skinT:'Face refresh',skin:'Water, cleanse if oily, moisturise if dry.',musicT:'Focus playlist',music:'Deep focus / ambient / low-vocal tracks.'}
 };
-function choose(){if(state.day==='goingout')return loops.social;if(state.day==='class')return loops.focus;if(state.energy==='high'||(state.sleep==='good'&&state.mood==='good')||state.day==='gym')return loops.locked;if(state.energy==='low'||state.mood==='stressed'||state.sleep==='bad')return loops.soft;return loops.focus}
-function setMood(type,val,el){el.parentElement.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));el.classList.add('on');state[type]=val;render()}
-function render(){const p=choose();const s=(id,val)=>document.getElementById(id).innerHTML=val;document.getElementById('demoAvFace').innerHTML=avatar(p.av);s('demoBubble',p.bubble);s('demoLabel',p.label);s('demoTitle',p.title);s('demoRecognise','“'+p.rec+'”');s('fitIcon',p.fitI);s('fitTitle',p.fitT);s('fitText',p.fit);s('foodTitle',p.foodT);s('foodText',p.food);s('skinTitle',p.skinT);s('skinText',p.skin);s('musicTitle',p.musicT);s('musicText',p.music)}render();
+function choose(){if(st.day==='goingout')return loops.social;if(st.day==='class')return loops.focus;if(st.energy==='high'||(st.sleep==='good'&&st.mood==='good')||st.day==='gym')return loops.locked;if(st.energy==='low'||st.mood==='stressed'||st.sleep==='bad')return loops.soft;return loops.focus}
+function setMood(type,val,el){el.parentElement.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));el.classList.add('on');st[type]=val;render()}
+function render(){const p=choose();const s=(id,val)=>document.getElementById(id).innerHTML=val;document.getElementById('demoAvFace').innerHTML=avatar(p.av);s('demoBubble',p.bubble);s('demoLabel',p.label);s('demoTitle',p.title);s('demoRecognise','"'+p.rec+'"');s('fitIcon',p.fitI);s('fitTitle',p.fitT);s('fitText',p.fit);s('foodTitle',p.foodT);s('foodText',p.food);s('skinTitle',p.skinT);s('skinText',p.skin);s('musicTitle',p.musicT);s('musicText',p.music)}
+render();
 
-// form
-document.getElementById('waitlistForm').addEventListener('submit',async function(e){e.preventDefault();const form=this;const btn=form.querySelector('button[type=submit]');const originalText=btn.textContent;btn.textContent='Joining...';btn.disabled=true;try{const r=await fetch(form.getAttribute('action'),{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});const data=await r.json();if(r.ok&&data.success){form.style.display='none';document.getElementById('successMsg').classList.add('show');}else{btn.textContent=originalText;btn.disabled=false;alert('Something went wrong. Please try again or email us.');}}catch(err){btn.textContent=originalText;btn.disabled=false;alert('Network error. Please try again.');}});
+// Scroll reveal
+const reveal=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');obs.unobserve(e.target)}})},{threshold:.12});
+reveal.forEach(r=>obs.observe(r));
+
+// Cursor glow (desktop only)
+if(window.innerWidth>768){
+  const glow=document.getElementById('cursorGlow');
+  document.addEventListener('mousemove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';glow.classList.add('show')});
+  document.addEventListener('mouseleave',()=>glow.classList.remove('show'));
+}
+
+// Form
+document.getElementById('waitlistForm').addEventListener('submit',async function(e){
+  e.preventDefault();
+  const form=this;const btn=form.querySelector('button[type=submit]');const orig=btn.textContent;
+  btn.textContent='Joining...';btn.disabled=true;
+  try{
+    const r=await fetch(form.getAttribute('action'),{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    const data=await r.json();
+    if(r.ok&&data.success){form.style.display='none';document.getElementById('successMsg').classList.add('show');}
+    else{btn.textContent=orig;btn.disabled=false;alert('Something went wrong. Please try again.');}
+  }catch(err){btn.textContent=orig;btn.disabled=false;alert('Network error. Please try again.');}
+});
 </script>
 </body>
 </html>
