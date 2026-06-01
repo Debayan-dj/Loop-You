@@ -1,24 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-<title>Loop-You — Check your vibe. Get today's Loop.</title>
-<meta name="description" content="Loop-You is a mood-first wellness app for UK Gen Z. Check your vibe. Get one simple plan for fitness, food, skincare and music." />
-<meta property="og:title" content="Loop-You — Check your vibe. Get today's Loop." />
-<meta property="og:description" content="A daily wellness friend for fitness, food, skincare and music — based on your mood." />
+
+<!-- Primary SEO meta -->
+<title>Loop-You — Mood-First Wellness App for UK Gen Z | Daily Fitness, Food, Skincare & Music</title>
+<meta name="description" content="Loop-You is a mood-first wellness app for UK Gen Z. Check your vibe. Get one daily plan for fitness, food, skincare and music — no streaks, no shame, no pressure. Join the founding 500 waitlist." />
+<meta name="keywords" content="wellness app, gen z wellness, mood tracker app, UK fitness app, lifestyle app, soft life, mood-based fitness, indie wellness app, daily wellness routine, vibe cards" />
+<meta name="author" content="Loop-You" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow" />
+<link rel="canonical" href="https://loop-you.com/" />
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn, etc.) -->
 <meta property="og:type" content="website" />
-<meta property="og:image" content="og-image.png" />
-<meta property="og:url" content="https://loop-you.com" />
+<meta property="og:site_name" content="Loop-You" />
+<meta property="og:title" content="Loop-You — Mood-First Wellness App for UK Gen Z" />
+<meta property="og:description" content="Check your vibe. Get one daily plan for fitness, food, skincare and music. No streaks. No shame. No pressure." />
+<meta property="og:image" content="https://loop-you.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Loop-You — your daily wellness friend" />
+<meta property="og:url" content="https://loop-you.com/" />
+<meta property="og:locale" content="en_GB" />
+
+<!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="og-image.png" />
+<meta name="twitter:title" content="Loop-You — Mood-First Wellness App for UK Gen Z" />
+<meta name="twitter:description" content="Check your vibe. Get one daily plan for fitness, food, skincare and music." />
+<meta name="twitter:image" content="https://loop-you.com/og-image.png" />
+<meta name="twitter:image:alt" content="Loop-You — your daily wellness friend" />
+
+<!-- Favicons -->
 <link rel="icon" type="image/x-icon" href="favicon.ico" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
 <meta name="theme-color" content="#FAF5EE" />
+
+<!-- Schema.org structured data — helps Google understand what Loop-You is -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Loop-You",
+  "alternateName": "Loop You",
+  "description": "A mood-first wellness app for UK Gen Z. Loop-You turns your daily mood into one simple plan for fitness, food, skincare and music — no streaks, no shame, no pressure.",
+  "url": "https://loop-you.com/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "iOS, Android, Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "description": "Free during private beta"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "Loop-You",
+    "url": "https://loop-you.com/",
+    "logo": "https://loop-you.com/logo-square-512.png"
+  },
+  "image": "https://loop-you.com/og-image.png"
+}
+</script>
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://images.unsplash.com" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
 <style>
 :root{
   --bg:#f8f8f3;--ink:#111312;--ink-soft:#3a3d3a;--muted:#69716b;--line:#e1e5dc;
@@ -64,7 +117,8 @@ body{font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;background:va
 .eyebrow{font-size:11px;font-weight:900;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin-bottom:18px;display:inline-block}
 .eyebrow.coral{color:var(--coral-deep)}
 h1{font-size:clamp(38px,7vw,72px);line-height:1;letter-spacing:-.04em;font-weight:900;color:var(--ink);margin-bottom:20px}
-h1 em{font-style:italic;font-weight:600;color:var(--green);background:linear-gradient(120deg,var(--green) 0%,var(--coral) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+h1 em{font-style:italic;font-weight:600;color:var(--green);background:linear-gradient(120deg,var(--green) 0%,var(--coral) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-block;word-break:keep-all}
+h2 em{font-style:italic;font-weight:500;color:var(--green);background:linear-gradient(120deg,var(--green) 0%,var(--coral) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-block;word-break:keep-all}
 .lead{font-size:clamp(15px,1.8vw,18px);color:var(--muted);line-height:1.55;margin-bottom:28px;max-width:540px}
 @media(max-width:880px){.lead{margin-left:auto;margin-right:auto}}
 .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
@@ -106,8 +160,7 @@ h1 em{font-style:italic;font-weight:600;color:var(--green);background:linear-gra
 section{padding:90px 0;position:relative}
 @media(max-width:560px){section{padding:60px 0}}
 .center{text-align:center}
-h2{font-size:clamp(32px,5vw,56px);line-height:1.05;letter-spacing:-.03em;font-weight:900;color:var(--ink);margin-bottom:18px}
-h2 em{font-style:italic;font-weight:500;color:var(--green);background:linear-gradient(120deg,var(--green) 0%,var(--coral) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+h2{font-size:clamp(28px,4.5vw,52px);line-height:1.05;letter-spacing:-.03em;font-weight:900;color:var(--ink);margin-bottom:18px;padding:0 8px}
 .lead.center{max-width:560px;margin-left:auto;margin-right:auto;text-align:center}
 
 /* Scroll reveal */
@@ -146,22 +199,31 @@ h2 em{font-style:italic;font-weight:500;color:var(--green);background:linear-gra
 .loop-card.sky{background:linear-gradient(165deg,#D4E5F2,#A8C9E0)} .loop-card.sky::before{background:#6890B5}
 
 /* Vibe cards */
-/* Vibe cards — tall portrait pastels */
+/* Vibe cards — tall portrait with background images + pastel overlays */
 .vibegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}
 @media(max-width:880px){.vibegrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.vibegrid{grid-template-columns:repeat(2,1fr);gap:10px}}
-.vibe{aspect-ratio:3/4;border-radius:24px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 14px 36px rgba(0,0,0,.1);transition:transform .35s cubic-bezier(.34,1.56,.64,1);position:relative;overflow:hidden;cursor:default}
+.vibe{aspect-ratio:3/4;border-radius:24px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 14px 36px rgba(0,0,0,.18);transition:transform .35s cubic-bezier(.34,1.56,.64,1);position:relative;overflow:hidden;cursor:default;background-size:cover;background-position:center;min-height:240px}
+@media(max-width:480px){.vibe{aspect-ratio:4/5;padding:14px;min-height:210px}}
 .vibe:hover{transform:translateY(-10px) rotate(-1.5deg)}
 .vibe:nth-child(even):hover{transform:translateY(-10px) rotate(1.5deg)}
-.vibe-head{display:flex;justify-content:space-between;align-items:flex-start;position:relative;z-index:2}
-.vibe-brand{font-size:9.5px;letter-spacing:.18em;font-weight:900;color:var(--ink);text-transform:uppercase;opacity:.55}
-.vibe-icon{width:42px;height:42px;background:rgba(255,255,255,.55);border-radius:14px;display:grid;place-items:center;font-size:20px;backdrop-filter:blur(4px)}
-.vibe-text{font-size:clamp(20px,2.5vw,28px);font-weight:900;letter-spacing:-.03em;line-height:1;color:var(--ink);position:relative;z-index:2}
-.vibe-foot{font-size:9.5px;letter-spacing:.16em;font-weight:900;color:var(--ink);text-transform:uppercase;opacity:.6;position:relative;z-index:2}
-.vibe1{background:linear-gradient(155deg,#C9FF4A,#A8E83C)}
-.vibe2{background:linear-gradient(155deg,#D8C9F5,#B8A4ED)}
-.vibe3{background:linear-gradient(155deg,#FFD9C2,#FFB893)}
-.vibe4{background:linear-gradient(155deg,#B8E8C2,#8FD49B)}
+.vibe::before{content:'';position:absolute;inset:0;z-index:1}
+.vibe>*{position:relative;z-index:2}
+.vibe-head{display:flex;justify-content:space-between;align-items:flex-start}
+.vibe-brand{font-size:9.5px;letter-spacing:.18em;font-weight:900;color:#fff;text-transform:uppercase;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.vibe-icon{width:42px;height:42px;background:rgba(255,255,255,.85);border-radius:14px;display:grid;place-items:center;font-size:20px;backdrop-filter:blur(6px);box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.vibe-text{font-size:clamp(18px,2.5vw,26px);font-weight:900;letter-spacing:-.03em;line-height:1.02;color:#fff;text-shadow:0 3px 12px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.4)}
+@media(max-width:480px){.vibe-text{font-size:17px;line-height:1.05}.vibe-icon{width:34px;height:34px;font-size:16px;border-radius:11px}.vibe-brand,.vibe-foot{font-size:8.5px}}
+.vibe-foot{font-size:9.5px;letter-spacing:.16em;font-weight:900;color:#fff;text-transform:uppercase;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+/* Each vibe with photographic bg + colored overlay */
+.vibe1{background-color:#A8E83C;background-image:url('https://images.unsplash.com/photo-1623390003553-4fa3f9fceb89?w=600&q=70&auto=format&fit=crop')}
+.vibe1::before{background:linear-gradient(165deg,rgba(168,232,60,.2),rgba(95,160,40,.4))}
+.vibe2{background-color:#B8A4ED;background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&q=70&auto=format&fit=crop')}
+.vibe2::before{background:linear-gradient(165deg,rgba(184,164,237,.25),rgba(120,90,200,.45))}
+.vibe3{background-color:#FFB893;background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=70&auto=format&fit=crop')}
+.vibe3::before{background:linear-gradient(165deg,rgba(255,184,147,.2),rgba(230,120,80,.4))}
+.vibe4{background-color:#8FD49B;background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=70&auto=format&fit=crop')}
+.vibe4::before{background:linear-gradient(165deg,rgba(143,212,155,.25),rgba(80,160,100,.45))}
 
 /* What's Coming (mystery) */
 .coming{padding:90px 0;background:linear-gradient(180deg,transparent,rgba(255,126,107,.04),transparent)}
@@ -226,13 +288,47 @@ footer .mark svg{width:30px;height:30px}
 .tiny{font-size:11px;color:#9aa19c;margin-top:14px;line-height:1.6;max-width:540px;margin-left:auto;margin-right:auto}
 .tiny b{color:var(--ink)}
 
-/* Mobile breakpoints */
+/* Mobile safety - prevent any cut-offs */
 @media(max-width:560px){
-  h1{font-size:42px}
+  h1{font-size:36px;line-height:1.05}
+  h2{font-size:28px;line-height:1.1}
   .hero{padding:10px 0 40px}
+  .hero h1{word-wrap:break-word;overflow-wrap:break-word;hyphens:auto}
   .demo{padding:24px 18px}
   .label{margin:14px 0 6px}
   .chip{padding:8px 12px;font-size:13px}
+  .phone{width:260px;height:528px}
+  .screen{padding:38px 14px 14px}
+  .phone-title{font-size:18px}
+  .vibe-text{font-size:18px}
+  .tease{padding:24px 20px;min-height:140px}
+  .tease h4{font-size:18px}
+  .marquee-item{font-size:32px;gap:30px}
+  .marquee-track{gap:30px}
+  .founding{padding:32px 18px;border-radius:24px}
+  .wait{padding:36px 20px;border-radius:24px}
+  .demo .left h2{font-size:22px}
+  section{padding:50px 0}
+  .links a:not(.btn){display:none}
+  .nav{height:64px}
+  .brand{font-size:17px;gap:8px}
+  .mark{width:30px;height:30px}
+  .mark svg{width:30px;height:30px}
+  .btn{padding:11px 16px;font-size:13px}
+  .hero-actions{gap:8px}
+  .premium-hint{padding:20px}
+  .premium-hint h4{font-size:18px}
+  .lead{font-size:14.5px}
+  /* Make sure nothing pokes out horizontally */
+  body{overflow-x:hidden}
+  .wrap{max-width:100%;overflow-x:hidden}
+}
+@media(max-width:380px){
+  h1{font-size:30px}
+  h2{font-size:24px}
+  .phone{width:230px;height:468px}
+  .vibe-text{font-size:16px}
+  .marquee-item{font-size:26px}
 }
 </style>
 </head>
@@ -240,15 +336,21 @@ footer .mark svg{width:30px;height:30px}
 
 <div class="cursor-glow" id="cursorGlow"></div>
 
+<header>
 <div class="wrap">
-  <nav class="nav">
-    <a href="#" class="brand"><span class="mark"><svg viewBox="0 0 96 96"><circle cx="38" cy="42" r="4" fill="#fff"/><circle cx="58" cy="42" r="4" fill="#fff"/><path d="M37 56 Q48 63 59 56" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></span>Loop-You</a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#" class="brand" aria-label="Loop-You home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 96 96"><circle cx="38" cy="42" r="4" fill="#fff"/><circle cx="58" cy="42" r="4" fill="#fff"/><path d="M37 56 Q48 63 59 56" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></span>Loop-You</a>
     <div class="links">
       <a href="#demo">Demo</a>
       <a href="#coming">What's coming</a>
       <a href="#waitlist" class="btn lime">Join waitlist</a>
     </div>
   </nav>
+</div>
+</header>
+
+<main>
+<div class="wrap">
 
   <!-- HERO -->
   <section class="hero">
@@ -383,7 +485,7 @@ footer .mark svg{width:30px;height:30px}
 <section id="coming" class="coming center reveal">
   <div class="wrap">
     <div class="eyebrow coral">More coming</div>
-    <h2>Six things <em>you'll feel first.</em></h2>
+    <h2>Six things<br><em>you'll feel first.</em></h2>
     <div class="tease-grid">
       <div class="tease"><div class="num">001</div><h4>Talk, don't type.</h4></div>
       <div class="tease"><div class="num">002</div><h4>Skin, that reads the day.</h4></div>
@@ -468,6 +570,7 @@ footer .mark svg{width:30px;height:30px}
     <p class="tiny">If you're in crisis, please reach out: <b>999</b> · <b>NHS 111</b> · <b>Samaritans 116 123</b>. Loop-You is not a substitute for professional care.</p>
   </footer>
 </div>
+</main>
 
 <script>
 // Mood avatars
